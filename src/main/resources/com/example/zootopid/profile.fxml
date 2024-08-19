@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.zootopid.AuthController">
+  <center>
+    <AnchorPane prefHeight="1080" prefWidth="1920" BorderPane.alignment="CENTER">
+      <children>
+            <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/view_background.png" />
+               </image>
+            </ImageView>
+        <Pane layoutX="628.0" layoutY="59.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="833.0" prefWidth="664.0" style="-fx-background-color: #43766C; -fx-background-radius: 6;">
+          <children>
+            <Label layoutX="38.0" layoutY="23.0" style="-fx-text-fill: white; -fx-font-family: Inter; -fx-font-size: 35; -fx-font-weight: bold;" text="Profile" textFill="WHITE">
+              <font>
+                <Font name="Ubuntu Regular" size="35.0" />
+              </font>
+            </Label>
+            <Circle accessibleRole="IMAGE_VIEW" fill="WHITE" layoutX="78.0" layoutY="124.0" radius="40.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="0.0">
+              <effect>
+                <Blend />
+              </effect>
+            </Circle>
+                  <ImageView fitHeight="23.0" fitWidth="158.0" layoutX="33.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/icon/logo.png" />
+                     </image>
+                  </ImageView>
+            <Label fx:id="username_label" layoutX="132.0" layoutY="100.0" style="-fx-text-fill: white;" text="Username" textFill="WHITE">
+              <font>
+                <Font name="Ubuntu Regular" size="32.0" />
+              </font>
+            </Label>
+            <Label fx:id="balance" layoutX="473.0" layoutY="67.0" prefHeight="101.0" prefWidth="183.0" style="-fx-text-fill: white;" text="1000 PTS" textFill="WHITE">
+              <font>
+                <Font name="System Bold" size="34.0" />
+              </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="182.0" style="-fx-text-fill: white;" text="My Ticket" textFill="WHITE">
+              <font>
+                <Font name="Ubuntu Regular" size="28.0" />
+              </font>
+            </Label>
+            <Label layoutX="339.0" layoutY="182.0" style="-fx-text-fill: white;" text="My Reward" textFill="WHITE">
+              <font>
+                <Font name="Ubuntu Regular" size="28.0" />
+              </font>
+            </Label>
+            <AnchorPane layoutX="34.0" layoutY="232.0" prefHeight="183.0" prefWidth="297.0">
+              <children>
+                <TableView fx:id="ticket_table" layoutX="-3.0" prefHeight="183.0" prefWidth="297.0" style="-fx-background-color: #DCCFBF;">
+                  <columns>
+                    <TableColumn fx:id="ticket_type" maxWidth="144.00006103515625" minWidth="144.00006103515625" prefWidth="144.00006103515625" resizable="false" text="TYPE" />
+                    <TableColumn fx:id="ticket_amount" maxWidth="67.199951171875" minWidth="67.199951171875" prefWidth="67.199951171875" resizable="false" sortable="false" style="fx-positon: Center;" text="AMOUNT" />
+                    <TableColumn fx:id="ticket_date" maxWidth="84.80001220703127" minWidth="84.80001220703127" prefWidth="84.80001220703127" resizable="false" text="DATE" />
+                  </columns>
+                </TableView>
+              </children>
+            </AnchorPane>
+            <AnchorPane layoutX="339.0" layoutY="232.0" prefHeight="183.0" prefWidth="270.0">
+              <children>
+                <TableView fx:id="reward_table" prefHeight="183.0" prefWidth="297.0" style="-fx-background-color: #DCCFBF;">
+                  <columns>
+                    <TableColumn fx:id="reward_type" prefWidth="144.00006103515625" resizable="false" text="TYPE" />
+                    <TableColumn fx:id="reward_amount" maxWidth="67.199951171875" minWidth="67.199951171875" prefWidth="67.199951171875" resizable="false" sortable="false" style="fx-positon: Center;" text="AMOUNT" />
+                    <TableColumn fx:id="reward_date" maxWidth="84.80001220703127" minWidth="84.80001220703127" prefWidth="84.80007324218752" resizable="false" text="DATE" />
+                  </columns>
+                </TableView>
+              </children>
+            </AnchorPane>
+            <Label layoutX="36.0" layoutY="434.0" style="-fx-text-fill: white;" text="Reward-Exchange" textFill="WHITE">
+              <font>
+                <Font name="Ubuntu Regular" size="28.0" />
+              </font>
+            </Label>
+            <AnchorPane layoutX="33.0" layoutY="473.0" prefHeight="320.0" prefWidth="596.0" style="-fx-background-color: #F8FAE5; -fx-background-radius: 8;">
+              <children>
+                <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="21.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../../../image/rewards/icon/backpack.png" />
+                  </image>
+                </ImageView>
+                <Button fx:id="backpack" alignment="CENTER" layoutX="21.0" layoutY="107.0" mnemonicParsing="false" onAction="#toggleRedeem" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-family: Inter SemiBold; -fx-background-radius: 8;" text="แลก" textFill="#030303">
+                  <font>
+                    <Font name="Inter SemiBold" size="12.0" />
+                  </font>
+                </Button>
+                <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="178.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../../../image/rewards/icon/bicycle.png" />
+                  </image>
+                </ImageView>
+                <Button fx:id="bicycle" layoutX="178.0" layoutY="107.0" mnemonicParsing="false" onAction="#toggleRedeem" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-family: Inter SemiBold; -fx-background-radius: 8;" text="แลก" textFill="#030303">
+                  <font>
+                    <Font name="Inter SemiBold" size="12.0" />
+                  </font>
+                </Button>
+                <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="335.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../../../image/rewards/icon/panda.png" />
+                  </image>
+                </ImageView>
+                <Button fx:id="panda" layoutX="335.0" layoutY="107.0" mnemonicParsing="false" onAction="#toggleRedeem" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-family: Inter SemiBold; -fx-background-radius: 8;" text="แลก" textFill="#030303">
+                  <font>
+                    <Font name="Inter SemiBold" size="12.0" />
+                  </font>
+                </Button>
+                <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="492.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../../../image/rewards/icon/pencil.png" />
+                  </image>
+                </ImageView>
+                <Button fx:id="pencil" layoutX="492.0" layoutY="107.0" mnemonicParsing="false" onAction="#toggleRedeem" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-family: Inter SemiBold; -fx-background-radius: 8;" text="แลก" textFill="#030303">
+                  <font>
+                    <Font name="Inter SemiBold" size="12.0" />
+                  </font>
+                </Button>
+                <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="21.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../../../image/rewards/icon/penguin.png" />
+                  </image>
+                </ImageView>
+                <Button fx:id="penguin" layoutX="21.0" layoutY="266.0" mnemonicParsing="false" onAction="#toggleRedeem" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-family: Inter SemiBold; -fx-background-radius: 8;" text="แลก" textFill="#030303">
+                  <font>
+                    <Font name="Inter SemiBold" size="12.0" />
+                  </font>
+                </Button>
+                <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="178.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../../../image/rewards/icon/seal.png" />
+                  </image>
+                </ImageView>
+                <Button fx:id="seal" layoutX="178.0" layoutY="266.0" mnemonicParsing="false" onAction="#toggleRedeem" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-family: Inter SemiBold; -fx-background-radius: 8;" text="แลก" textFill="#030303">
+                  <font>
+                    <Font name="Inter SemiBold" size="12.0" />
+                  </font>
+                </Button>
+                <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="335.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../../../image/rewards/icon/ticket.png" />
+                  </image>
+                </ImageView>
+                <Button fx:id="ticket" layoutX="335.0" layoutY="266.0" mnemonicParsing="false" onAction="#toggleRedeem" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-family: Inter SemiBold; -fx-background-radius: 8;" text="แลก" textFill="#030303">
+                  <font>
+                    <Font name="Inter SemiBold" size="12.0" />
+                  </font>
+                </Button>
+                <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="492.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../../../image/rewards/icon/wristband.png" />
+                  </image>
+                </ImageView>
+                <Button fx:id="wristband" layoutX="492.0" layoutY="266.0" mnemonicParsing="false" onAction="#toggleRedeem" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-family: Inter SemiBold; -fx-background-radius: 8;" text="แลก" textFill="#030303">
+                  <font>
+                    <Font name="Inter SemiBold" size="12.0" />
+                  </font>
+                </Button>
+              </children>
+            </AnchorPane>
+                  <Button onAction="#toggleTopup" layoutX="473.0" layoutY="140.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #F8FAE5;" text="TOPUP">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+          </children>
+        </Pane>
+        <Button layoutX="662.0" layoutY="912.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="596.0" style="-fx-background-color: #F8FAE5; -fx-background-radius: 8; -fx-text-alignment: left; -fx-text-fill: black;" text="LOGOUT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font></Button>
+      </children>
+    </AnchorPane>
+  </center>
+  <top>
+    <AnchorPane prefHeight="60.0" prefWidth="1920.0" style="-fx-background-color: #F8FAE5;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+      <children>
+        <Button layoutX="274.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchToMap" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="Map" textAlignment="CENTER" textFill="WHITE">
+          <font>
+            <Font name="System Bold" size="12.0" />
+          </font>
+        </Button>
+        <Button alignment="CENTER" layoutX="1636.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToProfile" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="Profile" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+          <font>
+            <Font name="System Bold" size="12.0" />
+          </font>
+        </Button>
+        <ImageView fitHeight="60.0" fitWidth="200.0" layoutX="33.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../../image/icon/logo.png" />
+          </image>
+        </ImageView>
+        <Button layoutX="453.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchToZoo" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="ZOO" textAlignment="CENTER" textFill="WHITE">
+          <font>
+            <Font name="System Bold" size="12.0" />
+          </font>
+        </Button>
+        <Button layoutX="634.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchToShow" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="AQUARIUM" textAlignment="CENTER" textFill="WHITE">
+          <font>
+            <Font name="System Bold" size="12.0" />
+          </font>
+        </Button>
+        <Button layoutX="815.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchToRental" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="RENTAL" textAlignment="CENTER" textFill="WHITE">
+          <font>
+            <Font name="System Bold" size="12.0" />
+          </font>
+        </Button>
+      </children>
+    </AnchorPane>
+  </top>
+   <rotationAxis>
+      <Point3D />
+   </rotationAxis>
+</BorderPane>

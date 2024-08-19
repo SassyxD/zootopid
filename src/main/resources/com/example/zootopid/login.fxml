@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.zootopid.AuthController">
+   <center>
+      <AnchorPane prefHeight="1080.0" prefWidth="1920.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="1080.0" prefWidth="1920.0">
+               <children>
+                  <ImageView fitHeight="1080.0" fitWidth="1920.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/login.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="1222.0" layoutY="139.0" prefHeight="800.0" prefWidth="540.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8fae5" height="800.0" stroke="BLACK" strokeType="INSIDE" width="540.0" />
+                  <Pane prefHeight="800.0" prefWidth="540.0">
+                     <children>
+                        <Circle fill="#67453b" layoutX="273.0" layoutY="102.0" radius="79.0" stroke="#67453b" strokeMiterLimit="0.0" strokeType="INSIDE" />
+                        <TextField fx:id="tel" layoutX="50.0" layoutY="195.0" prefHeight="39.0" prefWidth="440.0" promptText="Tel" style="-fx-background-color: DCCFBF; -fx-border-color: #B19470;">
+                           <font>
+                              <Font name="AngsanaUPC Bold" size="22.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <TextField fx:id="username" layoutX="50.0" layoutY="250.0" prefHeight="39.0" prefWidth="440.0" promptText="Username" style="-fx-background-color: DCCFBF; -fx-border-color: #B19470;">
+                           <font>
+                              <Font name="AngsanaUPC Bold" size="22.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <Button layoutX="54.0" layoutY="379.0" mnemonicParsing="false" onAction="#signIn" prefHeight="39.0" prefWidth="440.0" style="-fx-background-color: DDE67F;" text="Login" textFill="#b168ff" textOverrun="CLIP">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Button>
+                        <PasswordField fx:id="password" layoutX="50.0" layoutY="305.0" prefHeight="39.0" prefWidth="440.0" promptText="Password" style="-fx-background-color: DCCFBF; -fx-border-color: #B19470;">
+                           <font>
+                              <Font name="AngsanaUPC Bold" size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </PasswordField>
+                        <AnchorPane layoutX="53.0" layoutY="482.0" prefHeight="45.0" prefWidth="272.0">
+                           <children>
+                              <BorderPane prefHeight="45.0" prefWidth="200.0">
+                                 <left>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="About Zootopid" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="36.0" />
+                                       </font>
+                                    </Text>
+                                 </left>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                        <Pane layoutX="50.0" layoutY="530.0" prefHeight="200.0" prefWidth="440.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c3dcd7" height="200.0" stroke="BLACK" strokeType="INSIDE" width="440.0" />
+                              <TextArea layoutY="1.0" prefHeight="200.0" prefWidth="440.0" style="-fx-background-color: transparent;" text="แบบจำลองแผนที่สวนสัตว์ แสดงรายละเอียดของสัตว์และ facility ตามจุดต่างๆ รวมไปถึงการจองส่วนบริการต่างๆภายในสวนสัตว์  ไม่ว่าจะเป็น ตั๋วเข้าชม ตั๋วการแสดง เรือเป็ด และรถทัวร์สวนสัตว์&#10;" wrapText="true">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="196.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/icon/logo_app.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
